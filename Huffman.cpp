@@ -143,32 +143,6 @@ int main(int argc, char** argv){
         cout<<endl;
         numero++;
     }
-    for(int i=0;i< diccionario.size();i++){
-        listaOrdenada.push(new comparacion(ListaB[i][0],ListaB[i][1]));
-    }
-    string huffmanCanonico[diccionario.size()][2];
-    for(int i=0;i<diccionario.size();i++){//Relleno Lista de Huffman Canonico con lista ordenada
-        huffmanCanonico[i][0]=listaOrdenada.top()->letra;
-        huffmanCanonico[i][1]=to_string(stoi(toBinary(contadorCodigo)));
-        contadorCodigo++;
-        listaOrdenada.pop();
-        //cout<<huffmanCanonico[i][0]<<" "<<huffmanCanonico[i][1]<<endl;
-    }
-    cout<<"empiezo lista de Huffman Canonico"<<endl;
-    huffmanCanonico[0][1]="0";
-    for(int i=0;i<diccionario.size();i++){
-        cout<<huffmanCanonico[i][0]<<" "<<huffmanCanonico[i][1]<<endl;
-    }
-    Diccionario CanoHuffman;
-    for(int i=0;i<diccionario.size();i++){
-        CanoHuffman[(huffmanCanonico[i][0].front())]=huffmanCanonico[i][1];
-    }
-
-    cout<<"recorro diccionario:"<<endl;
-    for(Diccionario::const_iterator recorre = CanoHuffman.begin();recorre!=CanoHuffman.end();++recorre){
-        cout<<recorre->first << " "<<recorre->second;
-        cout<<endl;
-    }
     string output = "";
     for(int i=0; i<cadena.length();i++){
         output = output + diccionario[cadena[i]];

@@ -3,6 +3,7 @@
 #define HOJAS_H_
 
 using namespace std;
+#include "include/BasicCDS.h"
 
 class Inode{
     public:

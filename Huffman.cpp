@@ -194,4 +194,7 @@ int main(int argc, char** argv){
     }
     cout << endl;
     
+    double inSize = cadena.size()*CHAR_BIT;
+    double outSize = output.size();
+    double Ratio = outSize/inSize;
 }

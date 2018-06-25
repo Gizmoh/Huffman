@@ -179,5 +179,16 @@ int main(int argc, char** argv){
     cout << "Texto codificado: " << endl;
     cout<< output <<endl;
 
+
+    for(Diccionario::const_iterator recorre = diccionario.begin();recorre!=diccionario.end();++recorre){
+        decoder[recorre->second] = recorre->first;
+    }
+    for(int i=0;i < output.length();i++){
+        decoding = decoding + output[i];
+        if (decoder[decoding]){
+            cout << decoder[decoding];
+            decoding = "";
+        }
+    }
     
 }

@@ -197,4 +197,12 @@ int main(int argc, char** argv){
     double inSize = cadena.size()*CHAR_BIT;
     double outSize = output.size();
     double Ratio = outSize/inSize;
+
+
+    t3 = clock();
+    cout << "Tamaño de entrada en bits: " << inSize << endl;
+    cout << "Tamaño de salida en bits: " << outSize << endl;
+    cout << "Proporcion de compresion: " << Ratio << endl;
+    cout << "Tiempo de codificacion: " << (double(t1-t0)/CLOCKS_PER_SEC)<< "s" << endl;
+    cout << "Tiempo de decodificacion: " << (double(t3-t2)/CLOCKS_PER_SEC) << "s" << endl;
 }
